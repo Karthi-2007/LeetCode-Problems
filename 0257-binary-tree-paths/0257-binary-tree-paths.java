@@ -22,10 +22,10 @@ class Solution {
         return list;
     }
 
-    public List<String> dfs(TreeNode node , String path){
+    public void dfs(TreeNode node , String path){
 
         if(node == null){
-            return list;
+            return;
         }
 
     if(path.isEmpty()){
@@ -36,12 +36,11 @@ class Solution {
 
     if(node.left == null && node.right == null){
         list.add(path);
-        return list;
+        return;
     }
 
     dfs(node.left , path);
     dfs(node.right , path);
      
-     return list;
     }
 }
