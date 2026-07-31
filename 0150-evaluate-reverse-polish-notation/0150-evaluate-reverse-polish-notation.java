@@ -25,7 +25,7 @@ class Solution {
                     break;
                 }
             }else{
-                st.push(Integer.valueOf(token));
+                st.push(Integer.parseInt(token));
             }
         }
         return st.pop();
