@@ -24,7 +24,8 @@ class Solution {
         }
 
         for(int i=0;i<n;i++){
-            sum+=Math.max(left[i],right[i]);
+            max=Math.max(left[i],right[i]);
+            sum+=max;
         }
         return sum;
     }
