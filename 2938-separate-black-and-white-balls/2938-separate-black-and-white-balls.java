@@ -1,13 +1,18 @@
 class Solution {
     public long minimumSteps(String s) {
         long total = 0;
-        long count = 0;
+        int l = 0;
+        int r = s.length() - 1;
 
-        for(int i = 0;i<s.length();i++){
-            if(s.charAt(i) == '1'){
-                count++;
+        while(l < r){
+            if(s.charAt(l) == '0'){
+                l++;
+            }else if(s.charAt(r) == '1'){
+                r--;
             }else{
-                total += count;
+                total += (r - l);
+                l++;
+                r--;
             }
         }
         return total;
