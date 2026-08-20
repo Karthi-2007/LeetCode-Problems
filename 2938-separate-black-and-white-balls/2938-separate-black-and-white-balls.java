@@ -5,11 +5,13 @@ class Solution {
         int r = s.length() - 1;
 
         while(l < r){
-            if(s.charAt(l) == '0'){
+            while(l < r && s.charAt(l) == '0'){
                 l++;
-            }else if(s.charAt(r) == '1'){
+            }
+            while(l < r && s.charAt(r) == '1'){
                 r--;
-            }else{
+            }
+            if(l<r){
                 total += (r - l);
                 l++;
                 r--;
